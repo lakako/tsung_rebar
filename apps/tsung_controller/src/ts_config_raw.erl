@@ -33,11 +33,11 @@
 
 -export([parse_config/2]).
 
--include("ts_profile.hrl").
--include("ts_config.hrl").
--include("ts_raw.hrl").
+-include_lib("tsung_lib/include/ts_profile.hrl").
+-include_lib("tsung_lib/include/ts_config.hrl").
+-include_lib("tsung_lib/include/ts_raw.hrl").
 
--include("xmerl.hrl").
+-include_lib("xmerl/include/xmerl.hrl").
 
 %%----------------------------------------------------------------------
 %% Func: parse_config/2

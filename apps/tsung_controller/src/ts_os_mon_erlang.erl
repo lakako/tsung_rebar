@@ -29,8 +29,8 @@
 -author('nicolas.niclausse@niclux.org').
 
 
--include("ts_macros.hrl").
--include("ts_os_mon.hrl").
+-include_lib("tsung_lib/include/ts_macros.hrl").
+-include_lib("tsung_lib/include/ts_os_mon.hrl").
 
 -export([start/1, updatestats/3, client_start/0]).
 

@@ -57,8 +57,8 @@
 
 -define(DICT, dict).
 
--include("ts_config.hrl").
--include("xmerl.hrl").
+-include_lib("tsung_lib/include/ts_config.hrl").
+-include_lib("xmerl/include/xmerl.hrl").
 
 
 %%%----------------------------------------------------------------------

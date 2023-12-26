@@ -36,7 +36,7 @@
 
 -behaviour(gen_server).
 
--include("ts_config.hrl").
+-include_lib("tsung_lib/include/ts_config.hrl").
 
 %% External exports, API
 -export([start/0, start/1, stop/0, stop/1,

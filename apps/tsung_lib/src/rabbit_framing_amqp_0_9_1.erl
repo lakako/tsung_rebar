@@ -16,7 +16,7 @@
 %%  Copyright (c) 2007-2013 VMware, Inc.  All rights reserved.
 %%
 -module(rabbit_framing_amqp_0_9_1).
--include("rabbit_framing.hrl").
+-include_lib("tsung_lib/include/rabbit_framing.hrl").
 
 -export([version/0]).
 -export([lookup_method_name/1]).

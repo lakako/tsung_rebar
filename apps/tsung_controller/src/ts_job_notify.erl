@@ -35,8 +35,8 @@
 
 -behaviour(gen_server).
 
--include("ts_macros.hrl").
--include("ts_job.hrl").
+-include_lib("tsung_lib/include/ts_macros.hrl").
+-include_lib("tsung_lib/include/ts_job.hrl").
 
 %% API
 -export([start_link/0]).

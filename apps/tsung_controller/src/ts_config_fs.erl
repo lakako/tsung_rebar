@@ -30,13 +30,13 @@
 
 -export([parse_config/2]).
 
--include("ts_profile.hrl").
--include("ts_http.hrl").
--include("ts_config.hrl").
+-include_lib("tsung_lib/include/ts_profile.hrl").
+-include_lib("tsung_lib/include/ts_http.hrl").
+-include_lib("tsung_lib/include/ts_config.hrl").
 
--include("xmerl.hrl").
+-include_lib("xmerl/include/xmerl.hrl").
 
--include("ts_fs.hrl").
+-include_lib("tsung_lib/include/ts_fs.hrl").
 
 %% @spec parse_config(#xmlElement{}, Config::term()) -> NewConfig::term()
 %% @doc Parses a tsung.xml configuration file xml element for this

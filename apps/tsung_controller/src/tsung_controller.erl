@@ -30,7 +30,7 @@
 -export([start/0, start/2, start_phase/3, stop/1, stop_all/1, status/1, status_str/0]).
 -behaviour(application).
 
--include("ts_macros.hrl").
+-include_lib("tsung_lib/include/ts_macros.hrl").
 -include_lib("kernel/include/file.hrl").
 
 

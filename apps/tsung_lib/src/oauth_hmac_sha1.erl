@@ -34,7 +34,7 @@ signature(BaseString, CS, TS) ->
 sha2hmac(Key, Data) ->
   case erlang:function_exported(crypto, hmac, 3) of
     true ->
-      crypto:hmac(sha, Key, Data);
+      crypto:mac(hmac, sha, Key, Data);
     false ->
       crypto:sha_mac(Key, Data)
   end.

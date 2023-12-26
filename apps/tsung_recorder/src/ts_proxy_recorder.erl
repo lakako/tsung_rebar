@@ -38,7 +38,7 @@
 %%--------------------------------------------------------------------
 -include_lib("tsung_lib/include/ts_macros.hrl").
 -include_lib("tsung_lib/include/ts_http.hrl").
--include("ts_recorder.hrl").
+-include_lib("ts_recorder.hrl").
 
 %%--------------------------------------------------------------------
 %% External exports

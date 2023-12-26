@@ -23,7 +23,7 @@
 -export([init/1, handle_call/3, handle_cast/2, handle_info/2, terminate/2,
          code_change/3]).
 
--include("ts_config.hrl").
+-include_lib("tsung_lib/include/ts_config.hrl").
 
 -record(file, {
     items,  %% tuple of lines read from file

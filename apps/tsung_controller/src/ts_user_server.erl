@@ -27,7 +27,7 @@
 
 -vc('$Id$ ').
 
--include("ts_macros.hrl").
+-include_lib("tsung_lib/include/ts_macros.hrl").
 
 %%-compile(export_all).
 -export([reset/1,

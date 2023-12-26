@@ -26,7 +26,7 @@
 -vc('$Id$ ').
 -author('nicolas.niclausse@niclux.org').
 
--include("ts_macros.hrl").
+-include_lib("tsung_lib/include/ts_macros.hrl").
 
 -behaviour(supervisor).
 

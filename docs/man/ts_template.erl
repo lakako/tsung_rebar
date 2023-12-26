@@ -22,7 +22,7 @@
 -vc('$Id$ ').
 -author('').
 
--include("ts_profile.hrl").
+-include_lib("tsung_lib/include/ts_profile.hrl").
 
 -export([init_dynparams/0,
          add_dynparams/4,

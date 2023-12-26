@@ -36,8 +36,8 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
--include("ts_macros.hrl").
--include("ts_os_mon.hrl").
+-include_lib("tsung_lib/include/ts_macros.hrl").
+-include_lib("tsung_lib/include/ts_os_mon.hrl").
 
 -define(READ_TIMEOUT,2500). % 2.5 sec
 -define(SEND_TIMEOUT,5000).

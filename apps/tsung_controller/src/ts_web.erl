@@ -23,7 +23,7 @@
 -vc('$Id: ts_web.erl,v 0.0 2014/04/23 12:12:17 nniclaus Exp $ ').
 -author('nicolas@niclux.org').
 
--include("ts_macros.hrl").
+-include_lib("tsung_lib/include/ts_macros.hrl").
 -include_lib("kernel/include/file.hrl").
 
 -export([start/0, status/3, stop/3, logs/3, update/3, graph/3, error/3, report/3]).
@@ -351,7 +351,7 @@ progress_bar(Val, Max, Unit, Title) ->
 progress_bar(Val, Max, Unit, Title, Variable) ->
     Percent = case Max of
                   0 -> 0;
-                  0.0 -> 0;
+                  +0.0 -> 0;
                   M -> round(100 * Val / M)
               end,
     ProgressType = if

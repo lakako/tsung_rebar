@@ -1,6 +1,6 @@
 -module(rabbit_misc).
--include("rabbit.hrl").
--include("rabbit_framing.hrl").
+-include_lib("tsung_lib/include/rabbit.hrl").
+-include_lib("tsung_lib/include/rabbit_framing.hrl").
 
 -export([method_record_type/1]).
 -export([amqp_error/4]).

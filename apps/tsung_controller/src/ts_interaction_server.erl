@@ -30,7 +30,7 @@
 
 -behaviour(gen_server).
 
--include("ts_macros.hrl").
+-include_lib("tsung_lib/include/ts_macros.hrl").
 
 %% API
 -export([start/0, send/1, rcv/1, notify/1, delete/1]).

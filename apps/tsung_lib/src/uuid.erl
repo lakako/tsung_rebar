@@ -115,7 +115,7 @@ timestamp() ->
 %% Generates a UUID based on timestamp
 %%
 timestamp(Node, CS) ->
-    {MegaSecs, Secs, MicroSecs} = erlang:now(),
+    {MegaSecs, Secs, MicroSecs} = erlang:timestamp(),
     T = (((((MegaSecs * 1000000) + Secs) * 1000000) + MicroSecs) * 10) + 16#01b21dd213814000,
     format_uuid(T band 16#ffffffff, (T bsr 32) band 16#ffff, (T bsr 48) band 16#ffff, (CS bsr 8) band 16#ff, CS band 16#ff, Node, 1).
 
@@ -148,8 +148,7 @@ stop() ->
     gen_server:cast(?SERVER, stop).
 
 init(Options) ->
-    {A1,A2,A3} = proplists:get_value(seed, Options, erlang:now()),
-    random:seed(A1, A2, A3),
+    rand:seed(default),
     State = #state{
         node = proplists:get_value(node, Options, <<0:48>>),
         clock_seq = rand:uniform(65536)

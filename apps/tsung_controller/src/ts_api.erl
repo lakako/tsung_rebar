@@ -23,7 +23,7 @@
 -vc('$Id: ts_web.erl,v 0.0 2014/04/23 12:12:17 nniclaus Exp $ ').
 -author('nicolas@niclux.org').
 
--include("ts_macros.hrl").
+-include_lib("tsung_lib/include/ts_macros.hrl").
 -include_lib("kernel/include/file.hrl").
 
 -export([status/3]).

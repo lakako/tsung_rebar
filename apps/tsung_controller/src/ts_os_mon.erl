@@ -34,8 +34,8 @@
 %%--------------------------------------------------------------------
 %% Include files
 %%--------------------------------------------------------------------
--include("ts_macros.hrl").
--include("ts_os_mon.hrl").
+-include_lib("tsung_lib/include/ts_macros.hrl").
+-include_lib("tsung_lib/include/ts_os_mon.hrl").
 
 %%--------------------------------------------------------------------
 %% External exports

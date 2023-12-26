@@ -28,7 +28,7 @@
 
 -export([get_id/0, get_id/1, reset/0]).
 
--include("ts_macros.hrl").
+-include_lib("tsung_lib/include/ts_macros.hrl").
 
 -behaviour(gen_server).
 

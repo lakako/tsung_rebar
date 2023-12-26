@@ -26,7 +26,7 @@
 
 -behaviour(supervisor).
 
--include("ts_macros.hrl").
+-include_lib("tsung_lib/include/ts_macros.hrl").
 
 %% External exports
 -export([start_link/1, start_child/2]).

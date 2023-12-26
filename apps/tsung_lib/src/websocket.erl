@@ -30,9 +30,9 @@
 -export([get_handshake/6, check_handshake/2, encode_binary/1, encode_text/1,
          encode_close/1, encode/2, decode/1]).
 
--include("ts_profile.hrl").
--include("ts_config.hrl").
--include("ts_websocket.hrl").
+-include_lib("tsung_lib/include/ts_profile.hrl").
+-include_lib("tsung_lib/include/ts_config.hrl").
+-include_lib("tsung_lib/include/ts_websocket.hrl").
 
 %%%===================================================================
 %%% API functions

@@ -35,7 +35,7 @@
 
 -behaviour(gen_server).
 
--include("ts_config.hrl").
+-include_lib("tsung_lib/include/ts_config.hrl").
 
 -define(DELAYED_WRITE_SIZE,524288). % 512KB
 -define(DELAYED_WRITE_DELAY,5000).  % 5 sec

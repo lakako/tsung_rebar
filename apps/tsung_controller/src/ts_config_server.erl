@@ -43,8 +43,8 @@
 %% Include files
 %%--------------------------------------------------------------------
 
--include("ts_profile.hrl").
--include("ts_config.hrl").
+-include_lib("tsung_lib/include/ts_profile.hrl").
+-include_lib("tsung_lib/include/ts_config.hrl").
 
 %%--------------------------------------------------------------------
 %% External exports
@@ -833,7 +833,7 @@ expand_static([{Delay, Name} | Static],SessionsNames, Acc) ->
 %%
 %% @doc start a remote beam
 %%
-start_slave(Host, Name, Args) when is_atom(Host), is_atom(Name)->
+start_slave(Host, Name, _Args) when is_atom(Host), is_atom(Name)->
     case peer:start(#{name => Name, host => Host}) of
         {ok, Node} ->
             ?LOGF("Remote beam started on node ~p ~n", [Node], ?NOTICE),
@@ -886,16 +886,13 @@ set_nodename(NodeId) when is_integer(NodeId)->
           end,
     list_to_atom("tsung"++ CId++ integer_to_list(NodeId)).
 
-%% @spec set_max_duration(integer()) -> ok
+-spec set_max_duration(integer()) -> ok.
 %% @doc start a timer for the maximum duration of the load test. The
 %% maximum duration is 49 days
 set_max_duration(0) -> ok; % nothing to do
 set_max_duration(Duration) when Duration =< 4294967 ->
     ?LOGF("Set max duration of test: ~p s ~n",[Duration],?NOTICE),
     erlang:start_timer((Duration+?config(warm_time))*1000, self(), end_tsung ).
-
-
-
 
 local_launcher([],_,_) ->
     0;

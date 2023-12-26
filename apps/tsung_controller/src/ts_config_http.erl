@@ -35,11 +35,11 @@
          check_user_agent_sum/1, set_query/1, encode_ipv6_address/1,
          parse_headers/2]).
 
--include("ts_profile.hrl").
--include("ts_http.hrl").
--include("ts_config.hrl").
+-include_lib("tsung_lib/include/ts_profile.hrl").
+-include_lib("tsung_lib/include/ts_http.hrl").
+-include_lib("tsung_lib/include/ts_config.hrl").
 
--include("xmerl.hrl").
+-include_lib("xmerl/include/xmerl.hrl").
 
 %%----------------------------------------------------------------------
 %% Func: parse_config/2
